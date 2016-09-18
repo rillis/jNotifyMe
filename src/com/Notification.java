@@ -1,4 +1,7 @@
 package com;
+
+import javax.swing.UIManager;
+
 /**
  *
  * @author Rillis Vernucio
@@ -12,8 +15,7 @@ public class Notification extends javax.swing.JFrame {
     private void initComponents() {
 
         title = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        text = new javax.swing.JTextArea();
+        text = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -22,15 +24,9 @@ public class Notification extends javax.swing.JFrame {
         title.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         title.setText("TITEL");
 
-        text.setEditable(false);
-        text.setBackground(new java.awt.Color(240, 240, 240));
-        text.setColumns(20);
-        text.setLineWrap(true);
-        text.setRows(5);
-        text.setWrapStyleWord(true);
-        text.setBorder(null);
-        text.setCaretColor(new java.awt.Color(240, 240, 240));
-        jScrollPane1.setViewportView(text);
+        text.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        text.setText("jLabel1");
+        text.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -39,10 +35,10 @@ public class Notification extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(text, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(title)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
+                        .addGap(0, 138, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -51,24 +47,16 @@ public class Notification extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(title)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(text, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Notification().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JTextArea text;
+    public javax.swing.JLabel text;
     public javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }
