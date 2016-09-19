@@ -11,6 +11,6 @@ notificar(String title, String msg, int time)
 ```
 Mostra na tela a notifição:
 
-*title: titulo;
-*msg: mensagem;
-*time: tempo em milisegundos;
+* title: titulo;
+* msg: mensagem;
+* time: tempo em milisegundos;
